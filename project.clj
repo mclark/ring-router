@@ -2,5 +2,6 @@
   :description "Clout routing built into a (almost) ring handler."
   :dependencies [[org.clojure/clojure "1.2.0"]
                  [org.clojure/clojure-contrib "1.2.0"]
-                 [clout "0.3.1"]]
+                 [clout "0.3.1"]
+                 [ring/ring-core "0.3.4"]]
   :dev-dependencies [[swank-clojure "1.2.1"]])

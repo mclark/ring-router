@@ -31,6 +31,26 @@ the request match those specified by the parameters."
            m (keyword (.toLowerCase (name method)))]
        (fn [req]
          (if-let [route-params (route-matches r req)]
-           (do (println "route params for " req " is: " route-params)
-               (if (method-matches m req)
-                 (handler (assoc req :route-params route-params)))))))))
+           (if (method-matches m req)
+             (handler (assoc req :route-params route-params
+                             :params (merge (req :params) route-params)))))))))
+
+(defn GET
+  ([route handler] (match-route handler :get route))
+  ([route regex-map handler] (match-route handler :get route regex-map)))
+
+(defn POST
+  ([route handler] (match-route handler :post route))
+  ([route regex-map handler] (match-route handler :post route regex-map)))
+
+(defn PUT
+  ([route handler] (match-route handler :put route))
+  ([route regex-map handler] (match-route handler :put route regex-map)))
+
+(defn DELETE
+  ([route handler] (match-route handler :delete route))
+  ([route regex-map handler] (match-route handler :delete route regex-map)))
+
+(defn ANY
+  ([route handler] (match-route handler nil route))
+  ([route regex-map handler] (match-route handler nil route regex-map)))
