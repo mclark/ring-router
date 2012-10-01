@@ -16,10 +16,10 @@ right place.
 
 ## Usage
 
-(router
- [(match-route handler1 :get "products/:id.html")
-  (match-route handler2 :put "products/:id.html")
-  (match-route handlerN nil "/*")])
+	(router
+	 [(match-route handler1 :get "products/:id.html")
+	  (match-route handler2 :put "products/:id.html")
+	  (match-route handlerN nil "/*")])
 
 ## License
 
