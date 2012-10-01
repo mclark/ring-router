@@ -27,6 +27,10 @@ a simple code sample
 	  (match-route handler2 :put "products/:id.html")
 	  (match-route handlerN nil "/*")])
 
+a more complete example can be found here:
+
+	https://github.com/marianoguerra/immutant-recipes/tree/master/ring-router-example
+
 ## License
 
 Copyright (C) 2010 Matt Clark
