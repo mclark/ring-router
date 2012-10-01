@@ -16,6 +16,12 @@ right place.
 
 ## Usage
 
+add this to your project.clj dependencies
+
+	[ring-router "0.2-SNAPSHOT"]
+
+a simple code sample
+
 	(router
 	 [(match-route handler1 :get "products/:id.html")
 	  (match-route handler2 :put "products/:id.html")
