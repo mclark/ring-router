@@ -1,7 +1,6 @@
-(defproject ring-router "0.1-SNAPSHOT"
+(defproject ring-router "0.2-SNAPSHOT"
   :description "Clout routing built into a (almost) ring handler."
-  :dependencies [[org.clojure/clojure "1.2.0"]
-                 [org.clojure/clojure-contrib "1.2.0"]
-                 [clout "0.3.1"]
-                 [ring/ring-core "0.3.4"]]
+  :dependencies [[org.clojure/clojure "1.4.0"]
+                 [clout "1.1.0"]
+                 [ring/ring-core "1.1.6"]]
   :dev-dependencies [[swank-clojure "1.2.1"]])

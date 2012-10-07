@@ -16,10 +16,20 @@ right place.
 
 ## Usage
 
-(router
- [(match-route handler1 :get "products/:id.html")
-  (match-route handler2 :put "products/:id.html")
-  (match-route handlerN nil "/*")])
+add this to your project.clj dependencies
+
+	[ring-router "0.2-SNAPSHOT"]
+
+a simple code sample
+
+	(router
+	 [(match-route handler1 :get "products/:id.html")
+	  (match-route handler2 :put "products/:id.html")
+	  (match-route handlerN nil "/*")])
+
+a more complete example can be found here:
+
+	https://github.com/marianoguerra/immutant-recipes/tree/master/ring-router-example
 
 ## License
 
